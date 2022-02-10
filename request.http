@@ -1,0 +1,83 @@
+
+# Login User
+POST http://localhost:3000/auth/login HTTP/1.1
+Content-Type: application/json
+
+{
+  "email": "itIsNotEncrypted1@gmail.coma",
+  "password": "itIsNotEncrypted"
+}
+
+###
+# Register User
+POST http://localhost:3000/auth/register HTTP/1.1
+Content-Type: application/json
+
+{
+  "name": "AbuzarSocial",
+  "email": "itIsNotEncrypted1@gmail.coma",
+  "password": "itIsNotEncrypted",
+  "phone": "9973922757",
+  "dob": "1"
+}
+
+###
+
+POST http://localhost:3000/auth/logout HTTP/1.1
+Content-Type: application/json
+
+{
+  "email": "abuzarshabab@gmail.com"
+}
+
+###
+
+GET http://localhost:3000/auth/user/abuzarshabab@gmail.com HTTP/1.1
+Content-Type: application/json
+
+###
+
+GET http://localhost:3000/auth/users HTTP/1.1
+
+###
+# Social Service requests
+
+POST http://localhost:3000/social/follow HTTP/1.1
+Content-Type: application/json
+
+{
+  "followedBy": "RinkeshSir@gmail.com",
+  "followingTo": "Me@gmail.com"
+}
+
+###
+
+POST http://localhost:3000/social/unfollow HTTP/1.1
+Content-Type: application/json
+
+{
+  "followedBy": "nayab@gmail.com",
+  "unFollowingTo": "shabab@gmail.com"
+}
+
+
+###
+
+GET http://localhost:3000/social/followings HTTP/1.1
+Content-Type: application/json
+
+{
+  "userEmail": "Me@gmail.com"
+}
+
+###
+
+POST http://localhost:3000/social/followers HTTP/1.1
+Content-Type: application/json
+
+{
+ "userEmail": "Me@gmail.com"
+}
+
+
+####
